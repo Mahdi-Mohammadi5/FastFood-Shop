@@ -55,6 +55,7 @@ section{
 ul{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 li{
     list-style: none;
