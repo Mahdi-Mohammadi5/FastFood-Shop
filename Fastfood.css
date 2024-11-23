@@ -23,6 +23,7 @@ footer{
     margin: 5px;
     color: aliceblue;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 footer div{
     background-color: rgb(139, 84, 13);
