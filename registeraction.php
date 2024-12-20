@@ -16,10 +16,10 @@ if(isset($_POST["firstname"]) && !empty($_POST["firstname"])
     $username=$_POST["username"];
     $password=$_POST["password"];
     $repassword=$_POST["repassword"];
-    echo("<h1>".$firstname."</h1>");
-    echo("<h1>".$lastname."</h1>");
-    echo("<h1>".$email."</h1>");
-    echo("<h1>".$username."</h1>");
+    echo("<h1>"."firstname = ".$firstname."</h1>");
+    echo("<h1>"."lastname = ".$lastname."</h1>");
+    echo("<h1>"."email = ".$email."</h1>");
+    echo("<h1>"."username = ".$username."</h1>");
 }else
 {
 echo("<h1>پر کردن تمام فیلدها الزامی می باشد</h1>");
@@ -29,4 +29,3 @@ echo("<h1>پر کردن تمام فیلدها الزامی می باشد</h1>");
 <?php
 include("footer.html");
 ?>
-            
