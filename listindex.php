@@ -1,5 +1,5 @@
 <?php
-include("header.html");
+include("header.php");
 
 $link=mysqli_connect("localhost","root","","fastfood shop");
 $result=mysqli_query($link,"SELECT * FROM `mahsolat`");

@@ -12,6 +12,7 @@ header{
 main{
     background-color: mediumturquoise;
     padding: 3px;
+    border-radius: 10px;
     display: flex;
 }
 footer{
@@ -44,13 +45,14 @@ section{
     flex-grow: 40;
 }
 #img1,#img2,#img3,#img4,#img5{
-    width: 130px;
-    height: 65px;
-    margin: 5px;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
     border-radius: 10px;
     border: 3px;
     border-style: solid;
     border-color: black;
+    display: flex;
 }
 ul{
     display: flex;
@@ -76,6 +78,14 @@ li{
 a{
     color: rgb(247, 255, 19);
     text-decoration: none;
+}
+.mimage{
+    width: 120px;
+    height: 80px;
+    border-radius: 10px;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
 }
 .item_menu:hover{
     background-color: rgb(247, 255, 19);

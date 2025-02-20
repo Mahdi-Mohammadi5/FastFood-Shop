@@ -1,5 +1,5 @@
 <?php
-include("header.html");
+include("header.php");
 $id=$_GET["id"];
 
 $link=mysqli_connect("localhost","root","","fastfood shop");

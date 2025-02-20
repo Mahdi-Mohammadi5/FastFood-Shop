@@ -1,9 +1,14 @@
 <?php
-include("header.html");
-
+include("header.php");
+$image=$_FILES["image"]["name"];
 $name=$_POST["name"];
+$text=$_POST["text"];
+
+$imageurl="images/".$image;
+move_uploaded_file($_FILES["image"]["tmp_name"],$imageurl);
+
 $link=mysqli_connect("localhost","root","","fastfood shop");
-$result=mysqli_query($link,"INSERT INTO `mahsolat`(`name`) VALUES ('$name');");
+$result=mysqli_query($link,"INSERT INTO `mahsolat`(`name`, `text`, `imageurl`) VALUES ('$name','$text','$imageurl');");
 mysqli_close($link);
 ?>
  <div class="row">

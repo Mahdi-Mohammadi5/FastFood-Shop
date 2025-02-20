@@ -1,5 +1,5 @@
 <?php
-include("header.html");
+include("header.php");
 ?>
 
     <h1>پیتزا پپرونی</h1>

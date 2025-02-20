@@ -1,10 +1,16 @@
 <?php
-include("header.html");
+include("header.php");
 
 $id=$_POST["id"];
+$image=$_FILES["image"]["name"];
 $name=$_POST["name"];
+$text=$_POST["text"];
+
+$imageurl="images/".$image;
+move_uploaded_file($_FILES["image"]["tmp_name"],$imageurl);
+
 $link=mysqli_connect("localhost","root","","fastfood shop");
-$result=mysqli_query($link,"UPDATE `mahsolat` SET `name`='$name' WHERE `id`=$id");
+$result=mysqli_query($link,"UPDATE `mahsolat` SET `name`='$name',`text`='$text',`imageurl`='$imageurl' WHERE `id`=$id");
 mysqli_close($link);
 ?>
  <div class="row">
