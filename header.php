@@ -20,7 +20,10 @@ session_start();
             <li class="item_menu"><a href="index.php">صفحه اصلی</a></li>
             <li class="item_menu"><a href="about.php">درباره ما</a></li>
             <li class="item_menu"><a href="basket.html">سبد خرید</a></li>
+            <?php if(isset($_SESSION["admin"]) && $_SESSION["admin"]==true){ ?>
             <li class="item_menu"><a href="list.php">لیست محصولات</a></li>
+            <?php }else{ ?>
+                <?php } ?>
             <li class="item_menu"><a href="register.php">ثبت نام</a></li>
             <?php if(isset($_SESSION["login"])){ ?>
             <li class="item_menu"><a href="logout.php">خروج</a></li>

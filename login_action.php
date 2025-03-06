@@ -1,6 +1,7 @@
 <?php
 include("header.php");
 ?>
+
 <center>
 <?php
 $email=$_POST['email'];
@@ -14,6 +15,7 @@ $r=mysqli_fetch_array($m);
 if($r)
 {
     $_SESSION["login"]=true;
+    $_SESSION["admin"]=$r["admin"];
     ?>
     <script>
         location.replace("index.php");
@@ -21,11 +23,11 @@ if($r)
     <?php
 }else
 {
-    echo("نام کاربری یا کلمه عبور صحیح نیست");
+    echo(" ایمیل یا کلمه عبور صحیح نیست");
 }
-
 ?>
 </center>
+
 <?php
 include("footer.html");
 ?>

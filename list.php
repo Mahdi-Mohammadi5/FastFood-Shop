@@ -1,6 +1,16 @@
 <?php
 include("header.php");
+
+if(isset($_SESSION["admin"]) && $_SESSION["admin"]==true){
+}else{
+    ?>
+    <script>
+        location.replace("index.php");
+    </script>
+    <?php
+}
 ?>
+
 <div class="row">
     <div class="col">
     <button class="btn btn-primary"><a href="newlist.php">افزودن</a></button>
@@ -30,6 +40,7 @@ while($row){
 $row=mysqli_fetch_array($result);
 }
 ?>
+
 <?php
 include("footer.html");
 ?>
