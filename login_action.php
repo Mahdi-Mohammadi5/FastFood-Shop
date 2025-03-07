@@ -4,6 +4,11 @@ include("header.php");
 
 <center>
 <?php
+if (isset($_POST["email"]) && !empty($_POST["email"]) &&
+isset($_POST["password"]) && !empty($_POST["password"])) {
+$email = htmlspecialchars($_POST["email"]);
+$password = htmlspecialchars($_POST["password"]); 
+
 $email=$_POST['email'];
 $password=$_POST["password"];
 
@@ -23,9 +28,13 @@ if($r)
     <?php
 }else
 {
-    echo(" ایمیل یا کلمه عبور صحیح نیست");
+    echo("<p>ایمیل یا کلمه عبور صحیح نیست</p>");
 }
-?>
+}
+else{
+    echo("<p>پر کردن تمامی فیلدها الزامی می باشد</p>");
+    }
+    ?>
 </center>
 
 <?php
